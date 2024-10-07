@@ -13,9 +13,9 @@ const camion1 = new Camion("Iveco", "Daily", "AB-345-FR");
 const camion2 = new Camion("Scania", "Serie-R","SD-532-HG");
 const camion3 = new Camion("Renault", "Trucks", "BC-238-FY");
 
-const moto1 = new Moto("Honda", "Xr", "FLJ345"); 
-const moto2 = new Moto("Yamaha", "Fz","HJT235");
-const moto3 = new Moto("Kawasaki", "Kx", "LMN842");
+const moto1 = new Moto(5000, "Rojo" ,"Honda", "Xr", "FLJ345"); 
+const moto2 = new Moto(150, "Negro", "Yamaha", "Fz","HJT235");
+const moto3 = new Moto(250, "Verde","Kawasaki", "Kx", "LMN842");
 
 //CREO EL REGISTRO AUTOMOTOR
 const registroAutomotor = new RegistroAutomotor("registro automotor");
@@ -61,4 +61,9 @@ registroAutomotor.darDeBajaMoto("LMN842");
 //NUEVA LISTA VEHICULOS DENTRO DE REGISTRO AUTOMOTOR
 console.log(registroAutomotor.listaAutos());
 console.log(registroAutomotor.listaCamiones());
+console.log(registroAutomotor.listaMotos());
+
+//MODIFICAR PATENTE MOTO
+registroAutomotor.modificarPatente("FLJ345","ABC123");
+//PATENTE MODIFICADA
 console.log(registroAutomotor.listaMotos());

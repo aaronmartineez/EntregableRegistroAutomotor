@@ -100,8 +100,15 @@ darDeBajaMoto(patente: string): void{
     this.motos = this.motos.filter(moto => moto.getPatente() !== patente); 
     return console.log(patente, "se ha dado de baja");
 }
+
+modificarPatente(patente: string, nuevaPatente: string): void{
+    const patenteMoto = this.motos.find(buscarPatente => buscarPatente.getPatente() === patente);
+    if (patenteMoto) {
+        patenteMoto.setPatente(nuevaPatente);
+    } 
+
 }
 
-
+}
     
     
